@@ -1,0 +1,108 @@
+nav {
+    width:100%;
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding :40px;
+    position:fixed;
+    top:0;
+   
+
+}
+
+nav ul a{
+    cursor:pointer;
+
+}
+
+nav ul a:hover {
+   color:rgb(105, 228, 228);
+   border-bottom:2px solid white 
+}
+
+.active{   /* Giving spy ={true } is must and should be used */
+    color:rgb(105, 228, 228); /* giving the color to nav children */
+   border-bottom:2px solid white 
+}
+ nav ul{
+    display:flex;  /* all the childer are arranged in a row */
+    align-items:center; /* all the children are arranged in the vertically center */
+    justify-content: center; /* Move all children to the center */
+    gap:20px;
+    color:white;
+    list-style:none; /* dot hata ney key liye use karthey hai */
+    font-size:20px;
+    background-color: rgb(18, 22, 25);
+    z-index: 20px;
+    
+}   
+
+nav h1{
+    color:white ;
+    font-size:30px;
+    background:linear-gradient(to right,rgb(66, 189, 212),white);
+    background-clip: text;
+    color: transparent;
+}
+.hamburger{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    gap:8px;
+    display:none;
+    
+}
+.ham{
+    width:50px;
+    height:2px;
+    background-color:aliceblue;
+    transition:all 0.3s ease-in-out;
+}
+.mobilemenu{
+    position:absolute;
+    top:80px;
+    width:100%;
+    height:100vh;
+    background-color:rgb(18, 22, 25);
+    backdrop-filter:blur(10px);
+    right:0;
+    transform: translateX(100%);
+    flex-direction: column;
+    transition:all 0.3s ease-in-out;
+    gap:50px;
+}
+
+.activemobile{
+    transform:translateX(0%);
+
+}
+.activeham .ham:nth-child(1){
+    transform:rotate(45deg);
+    position:relative;
+    top:20px;
+
+
+}
+.activeham .ham:nth-child(2){
+  opacity:0;
+    
+}
+.activeham .ham:nth-child(3){
+    transform:rotate(-45deg);
+    position:realtive;
+    top:-10px;
+    
+}
+@media (max-width:768px){
+    .desktopmenu{
+        display:none;
+    }
+    
+    
+    .hamburger{
+        display:flex;
+    }
+}
