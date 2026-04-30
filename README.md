@@ -1,16 +1,80 @@
-# React + Vite
+# 🌐 Personal Portfolio - Hidayathulla
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **portfolio website** built using React to showcase my projects, skills, and experience as a developer.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
+🔗 https://your-portfolio-link.com
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 Features
+- ⚡ Modern UI with smooth scrolling
+- 🎨 Attractive design with animations
+- 💻 Responsive for all devices
+- 🔁 Infinite project slider
+- ⌨️ Typing animation effect
+- 📬 Contact section
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- React.js (Vite)
+- JavaScript (ES6+)
+- HTML5 & CSS3
+- GSAP (animations)
+- React Scroll
+
+---
+
+## 📂 Project Structure
+src/
+┣ components/
+┃ ┣ Nav/
+┃ ┣ Home/
+┃ ┣ About/
+┃ ┣ Projects/
+┃ ┣ Card/
+┃ ┗ Contact/
+┣ assets/
+┣ App.jsx
+┗ main.jsx
+
+
+---
+
+## 🧑‍💻 About Me
+Hi, I'm **Shaik Hidayathulla**, a passionate developer with experience in:
+
+- MERN Stack Development
+- Python Development
+- AI-based Projects
+
+---
+
+## 📊 Projects Included
+
+- 🤖 AI Chatbot  
+- 🏋️ AI Powered Fitness Website  
+- 🧠 Virtual Assistant  
+- 🎨 AI Text to Image Generator  
+- 🖼️ AI Background Remover  
+
+---
+
+## ⚙️ Installation & Setup
+
+1. Clone the repository
+```bash
+git clone" https://github.com/hidayathulla1234/Hidayath-Portfolio.git"
+
+
+2)Navigate to project folder
+cd Hidayath-Portfolio
+
+3)Install dependencies
+npm install
+
+4)Run the project
+npm run dev
