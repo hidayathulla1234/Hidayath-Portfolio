@@ -2,7 +2,7 @@ import React from 'react'
 import "./About.css"
 import Card from '../Card/Card'
 import mern from "../../assets/mern.png"
-import dsa from "../../assets/dsa.png"
+import dsa from "../../assets/dsa.png" 
 import py from "../../assets/py.png"
 
 
