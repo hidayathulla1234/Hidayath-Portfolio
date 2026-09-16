@@ -1,75 +1,44 @@
-#home{
-    width:100%;
-    height:100vh;
-    min-height:100vh;
-    display:flex;
-    
-   
-
+#home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 6% 60px;
+    background: radial-gradient(circle at 80% 20%, rgba(13, 161, 187, 0.12), transparent 45%),
+                radial-gradient(circle at 20% 80%, rgba(66, 189, 212, 0.08), transparent 40%);
 }
 
-.lefthome{
-    width: 50%;
-    height: 100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white
+.lefthome {
+    width: 58%;
+    display: flex;
+    align-items: center;
+    color: white;
 }
 
-.righthome{
-    width:50%;
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-}
-.righthome img {
-    width: 400px;
-    border-radius: 20px;
-
-    filter: drop-shadow(0 0 20px #08a2a2);
-
-    animation: float 4s ease-in-out infinite;
-
-    transition: transform 0.3s ease;
+.homedetails {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 640px;
 }
 
-.righthome img:hover {
-    transform: scale(1.1) rotate(2deg);
-    filter: drop-shadow(0 0 40px #00ffff);
-    cursor: pointer;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-.homedetails{
-    font-size:2vmax;
-}
 .line1 {
-    font-size: 0.8em;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #a0aec0;
+    letter-spacing: 1px;
 }
 
 .line2 {
-    font-size: 2.5em;
-    background: linear-gradient(90deg, #42bdd4, white, #42bdd4);
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.15;
+    background: linear-gradient(90deg, #42bdd4, #ffffff, #42bdd4);
     background-size: 200% auto;
-
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
-
-    animation: gradientMove 4s linear infinite;
+    animation: gradientMove 6s linear infinite;
 }
 
 @keyframes gradientMove {
@@ -77,38 +46,205 @@
     100% { background-position: 200% center; }
 }
 
+.line3 {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    font-weight: 600;
+    color: #38bdf8;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
 
-.homedetails button{
-    padding:10px 30px;
-    background-color: aqua;
-    color:black;
-    border:2px solid black;
-    margin-top:30px;
+.line3 .separator {
+    color: #64748b;
+}
+
+.hero-bio {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #cbd5e1;
+    margin-top: 4px;
+}
+
+.flow-badge {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    background: rgba(20, 26, 31, 0.85);
+    border: 1px solid rgba(66, 189, 212, 0.25);
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 0.88rem;
+    width: fit-content;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.flow-item {
+    color: #f1f5f9;
+    font-weight: 500;
+}
+
+.flow-arrow {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.hero-btn {
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary-btn {
+    background: #38bdf8;
+    color: #0b131a;
+    border: 2px solid #38bdf8;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.35);
+}
+
+.primary-btn:hover {
+    background: transparent;
+    color: #38bdf8;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
+    transform: translateY(-2px);
+}
+
+.resume-btn {
+    background: transparent;
+    color: #f8fafc;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.resume-btn:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.08);
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: rgba(20, 26, 31, 0.8);
+    color: #38bdf8;
+    border: 2px solid rgba(56, 189, 248, 0.35);
+}
+
+.secondary-btn:hover {
+    border-color: #38bdf8;
+    background: rgba(56, 189, 248, 0.15);
+    transform: translateY(-2px);
+}
+
+.hero-socials {
+    display: flex;
+    gap: 14px;
+    margin-top: 6px;
+}
+
+.social-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(20, 26, 31, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 20px;
-    font-size:19px;
-    transition: all 0.2s ease-in-out;
-    cursor:pointer;
-
-}
-.homedetails button:hover{
-    background-color:transparent;
-    color:aqua;
-    
-}
-@media (max-width:768px){
-    #home{
-        flex-direction:column;
-    }
-    .lefthome,.righthome{
-        width:100%;
-        height:50vh;
-    }
-    .righthome img{
-        width:200px;
-    }
-    .homedetails button{
-        padding:8px 20px;
-        font-size:16px;
-    }
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
 }
 
+.social-pill:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    transform: translateY(-2px);
+}
+
+.righthome {
+    width: 42%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.righthome img {
+    width: clamp(260px, 32vw, 420px);
+    height: auto;
+    border-radius: 24px;
+    filter: drop-shadow(0 0 25px rgba(8, 162, 162, 0.7));
+    animation: float 4s ease-in-out infinite;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.righthome img:hover {
+    transform: scale(1.04) rotate(1deg);
+    filter: drop-shadow(0 0 45px rgba(0, 255, 255, 0.9));
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-16px); }
+    100% { transform: translateY(0px); }
+}
+
+@media (max-width: 960px) {
+    #home {
+        flex-direction: column-reverse;
+        padding-top: 110px;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .lefthome, .righthome {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .homedetails {
+        align-items: center;
+    }
+
+    .line3 {
+        justify-content: center;
+    }
+
+    .flow-badge {
+        justify-content: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-socials {
+        justify-content: center;
+    }
+
+    .righthome img {
+        width: 260px;
+    }
+}

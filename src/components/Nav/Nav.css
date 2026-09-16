@@ -1,108 +1,129 @@
 nav {
-    width:100%;
-    height:80px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding :40px;
-    position:fixed;
-    top:0;
-   
-
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(18, 22, 25, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(66, 189, 212, 0.15);
 }
 
-nav ul a{
-    cursor:pointer;
+nav .logo-link {
+    text-decoration: none;
+}
 
+nav h1 {
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(to right, rgb(66, 189, 212), #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+}
+
+nav ul a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #e0e6ed;
+    transition: all 0.25s ease;
+    padding-bottom: 4px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 nav ul a:hover {
-   color:rgb(105, 228, 228);
-   border-bottom:2px solid white 
+    color: rgb(105, 228, 228);
+    border-bottom: 2px solid rgb(66, 189, 212);
 }
 
-.active{   /* Giving spy ={true } is must and should be used */
-    color:rgb(105, 228, 228); /* giving the color to nav children */
-   border-bottom:2px solid white 
+.active {
+    color: rgb(105, 228, 228) !important;
+    border-bottom: 2px solid rgb(66, 189, 212) !important;
 }
- nav ul{
-    display:flex;  /* all the childer are arranged in a row */
-    align-items:center; /* all the children are arranged in the vertically center */
-    justify-content: center; /* Move all children to the center */
-    gap:20px;
-    color:white;
-    list-style:none; /* dot hata ney key liye use karthey hai */
-    font-size:20px;
-    background-color: rgb(18, 22, 25);
-    z-index: 20px;
-    
-}   
 
-nav h1{
-    color:white ;
-    font-size:30px;
-    background:linear-gradient(to right,rgb(66, 189, 212),white);
-    background-clip: text;
-    color: transparent;
+.desktopmenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    background: transparent;
 }
-.hamburger{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    cursor:pointer;
-    gap:8px;
-    display:none;
-    
-}
-.ham{
-    width:50px;
-    height:2px;
-    background-color:aliceblue;
-    transition:all 0.3s ease-in-out;
-}
-.mobilemenu{
-    position:absolute;
-    top:80px;
-    width:100%;
-    height:100vh;
-    background-color:rgb(18, 22, 25);
-    backdrop-filter:blur(10px);
-    right:0;
-    transform: translateX(100%);
+
+.hamburger {
+    display: none;
     flex-direction: column;
-    transition:all 0.3s ease-in-out;
-    gap:50px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1100;
 }
 
-.activemobile{
-    transform:translateX(0%);
+.ham {
+    width: 28px;
+    height: 3px;
+    background-color: aliceblue;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
 
+.mobilemenu {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 75px);
+    background: rgba(14, 18, 22, 0.98);
+    backdrop-filter: blur(16px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
 }
-.activeham .ham:nth-child(1){
-    transform:rotate(45deg);
-    position:relative;
-    top:20px;
 
+.mobilemenu li a {
+    font-size: 20px;
+}
 
+.activemobile {
+    transform: translateX(0%);
 }
-.activeham .ham:nth-child(2){
-  opacity:0;
-    
+
+.activeham .ham:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
 }
-.activeham .ham:nth-child(3){
-    transform:rotate(-45deg);
-    position:realtive;
-    top:-10px;
-    
+
+.activeham .ham:nth-child(2) {
+    opacity: 0;
 }
-@media (max-width:768px){
-    .desktopmenu{
-        display:none;
+
+.activeham .ham:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 960px) {
+    nav {
+        padding: 0 24px;
     }
-    
-    
-    .hamburger{
-        display:flex;
+
+    .desktopmenu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
     }
 }

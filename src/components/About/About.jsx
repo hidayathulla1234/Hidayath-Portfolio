@@ -2,64 +2,70 @@ import React from 'react'
 import "./About.css"
 import Card from '../Card/Card'
 import mern from "../../assets/mern.png"
-import dsa from "../../assets/dsa.png" 
 import py from "../../assets/py.png"
-
+import va from "../../assets/va.png"
 
 function About() {
   return (
-    <div id="about">
-      <div className="leftabout">
-
-        <div className="circleline">
-          <div className="circle"></div>
-          <div className="line"></div>
-          <div className="circle"></div>
-          <div className="line"></div>
-          <div className="circle"></div>
-        </div>
-
-        <div className="aboutdetails">
-
-          <div className="personalinfo">
-            <h1>Personal Info</h1>
-            <ul>
-              <li><span>Name</span>: Shaik Hidayathulla</li>
-              <li><span>Age</span>: 22 Years old</li>
-             
-              <li><span>Gender</span>: Male</li>
-              <li><span>Languages</span>: Telugu, Hindi, English, Kannada</li>
-              
-            </ul>
-          </div>
-
-          <div className="education">
-            <h1>Education</h1>
-            <ul>
-              <li><span>Degree</span>: B.Tech</li>
-              <li><span>Branch</span>: CSE (AI)</li>
-              <li><span>CGPA</span>: 8.5</li>
-            </ul>
-          </div>
-
-          <div className="skills">
-            <h1>Skills</h1>
-            <ul>
-              <li>MERN Stack Developer</li>
-              <li>DSA</li>
-              <li>PYTHON</li>
-            </ul>
-          </div>
-
-        </div>
+    <section id="about" className="about-section">
+      <div className="section-title-container">
+        <h2>About Me</h2>
+        <div className="title-underline"></div>
       </div>
 
-      <div className="rightabout">
-        <Card title="MERN STACK WEB DEVELOPER" image={mern}/>
-        <Card title="DSA" image={dsa}/>
-        <Card title="PYTHON DEVELOPER"image={py}/>
-    </div>
-    </div>
+      <div className="about-container">
+        <div className="leftabout">
+          <div className="circleline">
+            <div className="circle"></div>
+            <div className="line"></div>
+            <div className="circle"></div>
+            <div className="line"></div>
+            <div className="circle"></div>
+          </div>
+
+          <div className="aboutdetails">
+            <div className="about-block">
+              <h3>Professional Summary</h3>
+              <p>
+                I am a <strong>B.Tech (Hons) in Computer Science Engineering</strong> student with a passion for designing scalable, end-to-end software solutions. I bridge the gap between intuitive user interfaces, high-performance backend systems, and cutting-edge artificial intelligence.
+              </p>
+            </div>
+
+            <div className="about-block">
+              <h3>Core Engineering Focus</h3>
+              <div className="focus-tags">
+                <span className="focus-tag">Frontend Development</span>
+                <span className="focus-tag">Backend Development</span>
+                <span className="focus-tag">REST API Development</span>
+                <span className="focus-tag">Database Management</span>
+                <span className="focus-tag">AI/ML & Deep Learning</span>
+                <span className="focus-tag">Generative AI</span>
+                <span className="focus-tag">LLM Applications</span>
+                <span className="focus-tag">RAG Pipelines</span>
+                <span className="focus-tag">AI Agents</span>
+                <span className="focus-tag">API Integration</span>
+                <span className="focus-tag">Automation Workflows</span>
+              </div>
+            </div>
+
+            <div className="about-block">
+              <h3>Academic Background</h3>
+              <ul>
+                <li><span>Degree:</span> B.Tech (Hons) — Computer Science Engineering</li>
+                <li><span>University:</span> Chhattisgarh Swami Vivekanand Technical University (CSVTU)</li>
+                <li><span>Period:</span> 2023 – 2027 | <span>CGPA:</span> 8.12 / 10</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="rightabout">
+          <Card title="FULL STACK ARCHITECTURE" image={mern} />
+          <Card title="AI AGENTS & RAG SYSTEMS" image={va} />
+          <Card title="SCALABLE BACKEND & ML" image={py} />
+        </div>
+      </div>
+    </section>
   )
 }
 

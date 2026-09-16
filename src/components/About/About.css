@@ -1,87 +1,161 @@
-#about{
-  
-    width:100%;
-    min-height:100%;
-   display :flex;
-
+.about-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 90px 6% 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.leftabout{
-    width:50%;
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction: row;
-    gap:30px;
-    
 
+.section-title-container {
+    text-align: center;
+    margin-bottom: 50px;
 }
-.circleline{
-display:flex;
-align-items:center;
 
-flex-direction: column;
-
-
-}
-.circle{
-    width:60px;
-    height:60px;
-    background-color:rgb(10, 187, 207);
-    border-radius:50px;
-    box-shadow:2px 2px 20px rgb(10, 187, 207)
-
-
-}
-.line{
-    width:2px;
-    height:150px;
-    background-color:aliceblue;
-
-}
-.aboutdetails{
-    display:flex;
-    flex-direction:column;
-    gap:70px; 
-    margin-left: 20px;
-    margin-top:19px
-
-}
-.aboutdetails h1{
-      background:linear-gradient(to right,rgba(228, 7, 110, 0.947),white);
+.section-title-container h2 {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    background: linear-gradient(to right, rgb(66, 189, 212), #ffffff);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
 }
-.aboutdetails li{
-    color:white;
 
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, rgb(66, 189, 212), #ffffff);
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
-.aboutdetails span{
-    color:aqua;
-}
-.rightabout{
-    width:50%;
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    gap:30px;
 
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
 }
-@media(max-width:750px){
-    #about{
-        flex-direction:column;
 
+.leftabout {
+    width: 58%;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.circleline {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 8px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(10, 187, 207);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgb(10, 187, 207);
+    flex-shrink: 0;
+}
+
+.line {
+    width: 2px;
+    height: 110px;
+    background: linear-gradient(to bottom, rgb(10, 187, 207), rgba(255, 255, 255, 0.2));
+}
+
+.aboutdetails {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.about-block h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #38bdf8, #e2e8f0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.about-block p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.about-block strong {
+    color: #38bdf8;
+}
+
+.focus-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.focus-tag {
+    padding: 6px 14px;
+    background: rgba(20, 26, 31, 0.9);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 16px;
+    color: #e2e8f0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.focus-tag:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    transform: translateY(-2px);
+}
+
+.about-block ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.about-block li {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.about-block span {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.rightabout {
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+@media (max-width: 960px) {
+    .about-container {
+        flex-direction: column;
     }
-    .leftabout{
-        width:100%;
-        padding:10%;
+
+    .leftabout {
+        width: 100%;
     }
-    .rightabout{
-        width:100%;
+
+    .rightabout {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .line {
+        height: 130px;
     }
 }
-    
-
-
