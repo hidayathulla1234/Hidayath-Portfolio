@@ -37,7 +37,7 @@ function Home() {
             <Link to="projects" smooth={true} duration={500} offset={-70} className="hero-btn primary-btn">
               View Projects
             </Link>
-            <a href="/HIDAYATH_RESUME.pdf" download="HIDAYATH_RESUME.pdf" className="hero-btn resume-btn">
+            <a href="/Hidayath_Resume_2026_F.pdf" download="Hidayath_Resume_2026_F.pdf" className="hero-btn resume-btn">
               Download Resume
             </a>
             <Link to="contact" smooth={true} duration={500} offset={-70} className="hero-btn secondary-btn">
